@@ -7,8 +7,17 @@ import { Animal }       from "./animal.model";
   <div class="row">
     <div class="col-md-6">
       <h3>Click on an animal to see its details.</h3>
+
+      <p><span class="filter-label">Filter Animals By Age:</span>
+        <select (change)="ageFilterSelection($event.target.value)">
+          <option value="allAnimals" selected="selected">All Animals</option>
+          <option value="youngAnimals">Under Age 2</option>
+            <option value="matureAnimals">Over Age 2</option>
+        </select>
+      </p>
+
       <ul class="animal-list">
-          <li *ngFor="let animal of childAnimalList">
+          <li *ngFor="let animal of childAnimalList | ageFilter:filterByAge">
             <a (click)="showDetails(animal)">{{animal.name}}</a>, the {{animal.species}}
           </li>
       </ul>
@@ -48,6 +57,7 @@ export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() newAnimalSender = new EventEmitter();
   animalToBeShown: Animal = null;
+  filterByAge: string = null;
 
   showDetails(animal: Animal) {
     this.animalToBeShown = animal;
@@ -55,6 +65,10 @@ export class AnimalListComponent {
 
   newAnimalToAdd(animal) {
     this.newAnimalSender.emit(animal);
+  }
+
+  ageFilterSelection(selectionFromMenu) {
+    this.filterByAge = selectionFromMenu;
   }
 
 }
