@@ -1,13 +1,24 @@
-.jumbotron{
-  background-image: url('./../../resources/images/tiger.jpeg');
+body {
+  font-family: 'Coming Soon', cursive;
+  letter-spacing: 2px;
+}
+
+.jumbotron {
+  background-image: url('./../../resources/images/jumbotron.jpg');
   background-position: center;
   min-height: 350px;
   color: white;
 }
 
-.jumbotron h1{
+.jumbotron h1 {
   padding: 20px 0 0 20px;
   max-width: 400px;
+  font-family: 'Mogra', cursive;
+  font-size: 5em;
+}
+
+h1 {
+  font-family: 'Mogra', cursive;
 }
 
 .filter-label {
@@ -23,11 +34,16 @@ a:hover {
   text-align: center;
 }
 
-.animal-details h3{
+.animal-details h3 {
   text-align: center;
 }
 
-.animal-picture{
+.animal-property-heading {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.animal-picture {
   width: 200px;
   height: auto;
 }

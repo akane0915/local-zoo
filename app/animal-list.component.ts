@@ -6,7 +6,7 @@ import { Animal }       from "./animal.model";
   template: `
   <div class="row">
     <div class="col-md-6">
-      <h3>Click on an animal to see its details.</h3>
+      <h3>Click on an animal to see its details.</h3><br>
 
       <p><span class="filter-label">Filter Animals By Age:</span>
         <select (change)="ageFilterSelection($event.target.value)">
@@ -14,7 +14,7 @@ import { Animal }       from "./animal.model";
           <option value="youngAnimals">Under Age 2</option>
             <option value="matureAnimals">Over Age 2</option>
         </select>
-      </p>
+      </p><br>
 
       <ul class="animal-list">
           <li *ngFor="let animal of childAnimalList | ageFilter:filterByAge">
@@ -30,14 +30,14 @@ import { Animal }       from "./animal.model";
           <div  class="animal-details ">
             <h3>{{animalToBeShown.name}}</h3>
             <div class="col-md-6">
-              <p>Species: {{animalToBeShown.species}}</p>
-              <p>Age: {{animalToBeShown.age}}</p>
-              <p>Diet: {{animalToBeShown.diet}}</p>
-              <p>Location in Zoo: {{animalToBeShown.location}}</p>
-              <p>Caretakers: {{animalToBeShown.caretakers}}</p>
-              <p>Sex: {{animalToBeShown.sex}}</p>
-              <p>Likes: {{animalToBeShown.likes}}</p>
-              <p>Dislikes: {{animalToBeShown.dislikes}}</p>
+              <p><span class="animal-property-heading">Species:</span> {{animalToBeShown.species}}</p>
+              <p><span class="animal-property-heading" >Age:</span> {{animalToBeShown.age}}</p>
+              <p><span class="animal-property-heading" >Diet:</span> {{animalToBeShown.diet}}</p>
+              <p><span class="animal-property-heading" >Location in Zoo:</span> {{animalToBeShown.location}}</p>
+              <p><span class="animal-property-heading" >Caretakers:</span> {{animalToBeShown.caretakers}}</p>
+              <p><span class="animal-property-heading" >Sex:</span> {{animalToBeShown.sex}}</p>
+              <p><span class="animal-property-heading" >Likes:</span> {{animalToBeShown.likes}}</p>
+              <p><span class="animal-property-heading" >Dislikes:</span> {{animalToBeShown.dislikes}}</p>
           </div>
 
           <div class="col-md-6">
