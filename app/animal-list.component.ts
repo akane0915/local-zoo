@@ -14,16 +14,23 @@ import { Animal }       from "./animal.model";
       </ul>
     </div>
     <div class="col-md-6">
-      <div *ngIf="animalToBeShown">
-        <h3>{{animalToBeShown.name}}</h3>
-        <p>Species: {{animalToBeShown.species}}</p>
-        <p>Age: {{animalToBeShown.age}}</p>
-        <p>Diet: {{animalToBeShown.diet}}</p>
-        <p>Location in Zoo: {{animalToBeShown.location}}</p>
-        <p>Caretakers: {{animalToBeShown.caretakers}}</p>
-        <p>Sex: {{animalToBeShown.sex}}</p>
-        <p>Likes: {{animalToBeShown.likes}}</p>
-        <p>Dislikes: {{animalToBeShown.dislikes}}</p>
+      <div class="row">
+          <div *ngIf="animalToBeShown" class="animal-details well">
+            <h3>{{animalToBeShown.name}}</h3>
+            <div class="col-md-6">
+              <p>Species: {{animalToBeShown.species}}</p>
+              <p>Age: {{animalToBeShown.age}}</p>
+              <p>Diet: {{animalToBeShown.diet}}</p>
+              <p>Location in Zoo: {{animalToBeShown.location}}</p>
+              <p>Caretakers: {{animalToBeShown.caretakers}}</p>
+              <p>Sex: {{animalToBeShown.sex}}</p>
+              <p>Likes: {{animalToBeShown.likes}}</p>
+              <p>Dislikes: {{animalToBeShown.dislikes}}</p>
+          </div>
+          <div class="col-md-6">
+            <img class="animal-picture" src="./../resources/images/fox.jpeg" alt="Tiger Image"/>
+          </div>
+        </div>
       </div>
     </div>
   </div>
