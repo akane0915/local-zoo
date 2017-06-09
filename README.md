@@ -5,7 +5,6 @@
 #### By _**Asia Kane**_
 
 ![Homepage](resources/images/homepage.png)
-![List Animals Page]()
 
 ## Description
 
@@ -80,6 +79,12 @@ _N/A_
 ## Support and contact details
 _I encourage you to update/make suggestions/refactor this code as you see fit. I am always open to improvement! Please contact Asia Kane at asialkane@gmail.com with questions._
 
-  ### License
+## Screen Shots
+
+![Animal Details](resources/images/animal-details.png)
+![New Animal](resources/images/new-animal.png)
+![Edit Animal](resources/images/edit.png)
+
+### License
   *This software is licensed under the MIT license*
   Copyright © 2017 **Asia Kane**
