@@ -24,7 +24,7 @@ Models:
   - Animal (Properties: species, name, age, diet, zoo location, number of needed caretakers, sex, one like, one dislike)
 
 Entry Point:
-  - app.main.ts
+  - main.ts
 
 Modules:
   - Root module (app.module.ts)
@@ -57,8 +57,7 @@ In your terminal:
 ## Running / Development
 
 * `gulp build`
-* `gulp serve`
-* Visit your app at [http://localhost:3000](http://localhost:3000).
+* `gulp serve` (http://localhost:3000).
 * If you would like to make changes to this project, do so in the text editor.
 * Make frequent commits with detailed comments.
 * Submit changes as pull request to Asia at akane0915 on Github.
