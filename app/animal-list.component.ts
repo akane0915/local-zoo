@@ -12,7 +12,10 @@ import { Animal }       from "./animal.model";
             <a (click)="showDetails(animal)">{{animal.name}}</a>, the {{animal.species}}
           </li>
       </ul>
+
+      <new-animal></new-animal>
     </div>
+
     <div class="col-md-6">
       <div class="row">
           <div *ngIf="animalToBeShown" class="animal-details well">
@@ -27,6 +30,7 @@ import { Animal }       from "./animal.model";
               <p>Likes: {{animalToBeShown.likes}}</p>
               <p>Dislikes: {{animalToBeShown.dislikes}}</p>
           </div>
+
           <div class="col-md-6">
             <img class="animal-picture" src="./../resources/images/fox.jpeg" alt="Tiger Image"/>
           </div>
