@@ -1,4 +1,4 @@
-import { Component, Input}  from "@angular/core";
+import { Component, Input, Output, EventEmitter}  from "@angular/core";
 import { Animal }       from "./animal.model";
 
 @Component({
@@ -13,7 +13,7 @@ import { Animal }       from "./animal.model";
           </li>
       </ul>
 
-      <new-animal></new-animal>
+      <new-animal (newAnimalSender) = "newAnimalToAdd($event)"></new-animal>
     </div>
 
     <div class="col-md-6">
@@ -43,9 +43,14 @@ import { Animal }       from "./animal.model";
 
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
+  @Output() newAnimalSender = new EventEmitter();
   animalToBeShown: Animal = null;
 
   showDetails(animal: Animal) {
     this.animalToBeShown = animal;
+  }
+
+  newAnimalToAdd(animal) {
+    this.newAnimalSender.emit(animal);
   }
 }
