@@ -22,3 +22,8 @@ a:hover {
   width: 200px;
   height: auto;
 }
+
+.edit-button {
+  display: block;
+  clear: both;
+}

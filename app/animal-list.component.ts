@@ -34,6 +34,9 @@ import { Animal }       from "./animal.model";
           <div class="col-md-6">
             <img class="animal-picture" src="./../resources/images/fox.jpeg" alt="Tiger Image"/>
           </div>
+
+          <edit-animal [childAnimalToEdit]="animalToBeShown"></edit-animal>
+
         </div>
       </div>
     </div>
@@ -53,4 +56,5 @@ export class AnimalListComponent {
   newAnimalToAdd(animal) {
     this.newAnimalSender.emit(animal);
   }
+
 }

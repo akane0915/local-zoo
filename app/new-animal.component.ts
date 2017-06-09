@@ -9,6 +9,7 @@ import { Animal }      from './animal.model';
   </div>
   <div *ngIf="showAnimalForm">
     <form>
+    <hr>
       <h3>Create a New Animal:</h3>
         <label>Species:</label>
         <input class="form-control" #newSpecies>
@@ -28,8 +29,9 @@ import { Animal }      from './animal.model';
         <input class="form-control" #newLikes>
         <label>Dislikes:</label>
         <input class="form-control" #newDislikes>
+        <br>
 
-        <button class="btn btn-default"
+        <button class="btn btn-success"
           (click)="submitAddNewForm(
             newSpecies.value,
             newName.value,
@@ -50,7 +52,7 @@ import { Animal }      from './animal.model';
             newSex.value='';
             newLikes.value='';
             newDislikes.value='';
-          ">Add
+          ">Submit
         </button>
     </form>
   </div>
@@ -67,7 +69,8 @@ export class NewAnimalComponent  {
 
   submitAddNewForm(newSpecies: string, newName: string, newAge: number, newDiet: string, newLocation: string, newCaretakers: number, newSex: string, newLikes: string, newDislikes: string) {
     let newAnimalToAdd: Animal = new Animal(newSpecies, newName, newAge, newDiet, newLocation, newCaretakers, newSex, newLikes, newDislikes);
-
+    // this.showAnimalForm = false;
     this.newAnimalSender.emit(newAnimalToAdd);
+
   }
 }
