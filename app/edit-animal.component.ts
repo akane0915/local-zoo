@@ -9,6 +9,7 @@ import { Animal } from './animal.model';
 
     <div class="edit-form">
       <div *ngIf="showEditForm">
+        <hr>
         <h4>Edit Form for {{childAnimalToEdit.name}}</h4>
 
         <label>Species:</label>
@@ -37,6 +38,7 @@ import { Animal } from './animal.model';
 
         <label>Dislikes:</label>
         <input class="form-control" [(ngModel)]="childAnimalToEdit.dislikes">
+        <br>
 
         <button class="btn btn-success" (click)="finshedEditing()">Done</button>
       </div>

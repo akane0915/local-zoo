@@ -25,9 +25,9 @@ import { Animal }       from "./animal.model";
       <new-animal (newAnimalSender) = "newAnimalToAdd($event)"></new-animal>
     </div>
 
-    <div class="col-md-6">
+    <div *ngIf="animalToBeShown" class="col-md-6 well">
       <div class="row">
-          <div *ngIf="animalToBeShown" class="animal-details well">
+          <div  class="animal-details ">
             <h3>{{animalToBeShown.name}}</h3>
             <div class="col-md-6">
               <p>Species: {{animalToBeShown.species}}</p>
@@ -41,13 +41,13 @@ import { Animal }       from "./animal.model";
           </div>
 
           <div class="col-md-6">
-            <img class="animal-picture" src="./../resources/images/fox.jpeg" alt="Tiger Image"/>
+            <img class="animal-picture" src="./../resources/images/{{animalToBeShown.image}}" alt="Animal Image"/>
           </div>
-
-          <edit-animal [childAnimalToEdit]="animalToBeShown"></edit-animal>
-
         </div>
       </div>
+
+      <edit-animal [childAnimalToEdit]="animalToBeShown"></edit-animal>
+
     </div>
   </div>
   `

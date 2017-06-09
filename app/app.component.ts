@@ -22,7 +22,8 @@ export class AppComponent {
       5,
       "Female",
       "Cool shade",
-      "Loud noises"
+      "Loud noises",
+      "fox.jpeg"
     ),
     new Animal(
       "Ocelot",
@@ -33,7 +34,8 @@ export class AppComponent {
       6,
       "Male",
       "Laying in the sunshine",
-      "Toys that are not rope-based"
+      "Toys that are not rope-based",
+      "ocelot.jpeg"
     ),
     new Animal(
       "Northwest Black Tailed Deer",
@@ -43,7 +45,8 @@ export class AppComponent {
       2,
       "Female",
       "Delicate roots and leaves",
-      "Loud Noises"
+      "Loud Noises",
+      "deer.jpeg"
     )
   ];
 
