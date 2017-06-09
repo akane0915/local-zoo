@@ -6,15 +6,17 @@ body {
 .jumbotron {
   background-image: url('./../../resources/images/jumbotron.jpg');
   background-position: center;
-  min-height: 350px;
+  min-height: 450px;
   color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jumbotron h1 {
   padding: 20px 0 0 20px;
   max-width: 400px;
   font-family: 'Mogra', cursive;
-  font-size: 5em;
+  font-size: 6em;
 }
 
 h1 {

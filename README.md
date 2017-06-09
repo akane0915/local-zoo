@@ -4,7 +4,7 @@
 
 #### By _**Asia Kane**_
 
-![Homepage]()
+![Homepage](resources/images/homepage.png)
 ![List Animals Page]()
 
 ## Description
