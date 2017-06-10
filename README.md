@@ -34,6 +34,9 @@ Components:
   - new-animal.component.ts
   - edit-animal.component.ts
 
+Pipes:
+  - age-filter.pipe.ts
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -47,7 +50,7 @@ You will need the following things properly installed on your computer.
 
 In your terminal:
 * `git clone https://github.com/akane0915/local-zoo`
-* `cd zoo-app`
+* `cd local-zoo`
 * `npm install`
 * `npm install typescript`
 * `apm install atom-typescript`
